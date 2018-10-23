@@ -122,10 +122,10 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (dataSnapshot.child(user.getUserName()).exists())
-                            Toast.makeText(MainActivity.this,"User aready exits!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"User aready exits !!!",Toast.LENGTH_SHORT).show();
                         else {
                             users.child(user.getUserName()).setValue(user);
-                            Toast.makeText(MainActivity.this,"User register sussess",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"User register sussess :D",Toast.LENGTH_SHORT).show();
 
                         }
                     }
