@@ -1,6 +1,7 @@
 package com.example.minutecrazy.project;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.minutecrazy.project.Common.Common;
 import com.example.minutecrazy.project.Model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -69,7 +71,16 @@ public class MainActivity extends AppCompatActivity {
                     if (!user.isEmpty()){
                         User login = dataSnapshot.child(user).getValue(User.class);
                         if (login.getPassword().equals(pwd)){
-                            Toast.makeText(MainActivity.this,"Login ok :) eiei",Toast.LENGTH_SHORT).show();
+                            if(login.getUserName().equals("admin")){
+                                Intent intent = new Intent(MainActivity.this,Home_addActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }else {
+                                Common.currentUser = login ;
+                                Intent intent = new Intent(MainActivity.this,Home.class);
+                                startActivity(intent);
+                                finish();
+                            }
                         }else {
                             Toast.makeText(MainActivity.this,"Wrong password :(",Toast.LENGTH_SHORT).show();
                         }

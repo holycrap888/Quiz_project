@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+
+    >
+<LinearLayout
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/questionText1"
+            android:text="Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            />
+
+        <RadioGroup
+            android:id="@+id/ans_question1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/btnAnsA1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ans"/>
+            <RadioButton
+                android:id="@+id/btnAnsB1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ans"/>
+            <RadioButton
+                android:id="@+id/btnAnsC1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ans"/>
+            <RadioButton
+                android:id="@+id/btnAnsD1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ans"/>
+
+        </RadioGroup>
+
+
+
+
+
+</LinearLayout></android.support.v7.widget.CardView>
